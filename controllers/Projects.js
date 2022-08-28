@@ -1,7 +1,5 @@
 require("../config/dotEnv");
 const Projects = require("../model/Projects");
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcryptjs");
 
 exports.postproject = async (req, res) => {
   try {
@@ -57,11 +55,6 @@ exports.postproject = async (req, res) => {
       return res.status(401).send(errors);
     } else if (err.name === "MongoServerError") {
       console.log("Error due to => ", err.keyPattern);
-      // if (error.keyValue.rollNumber) {
-      //   return res.status(409).send("Roll Number already Available");
-      // } else if (error.keyPattern.mobileNumber) {
-      //   return res.status(409).send("Mobile Number already Available");
-      // }
     }
   }
 };

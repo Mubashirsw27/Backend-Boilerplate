@@ -13,13 +13,6 @@ const projects = require("./route/Projects");
 //Express Container
 const app = express();
 
-//Bcrypt
-
-const bcrypt = require("bcrypt");
-const saltRounds = 10;
-const myPlaintextPassword = "s0//P4$$w0rD";
-const someOtherPlaintextPassword = "not_bacon";
-
 //Middlewares
 app.use(middlewares.morgan);
 app.use(middlewares.bodyParser);

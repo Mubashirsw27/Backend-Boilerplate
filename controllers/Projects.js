@@ -11,22 +11,7 @@ exports.postproject = async (req, res) => {
       uploadedBy,
     } = req.body;
 
-    if (
-      !(
-        projectName &&
-        projectID &&
-        projectDescription &&
-        projectAdvisor &&
-        uploadedBy
-      )
-    ) {
-      console.log(
-        projectName,
-        projectID,
-        projectDescription,
-        projectAdvisor,
-        uploadedBy
-      );
+    if (!(projectName && projectDescription && projectAdvisor && uploadedBy)) {
       return res.status(401).send("All inputs are required");
     }
 
